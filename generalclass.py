@@ -1,5 +1,5 @@
 import hashlib
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow
 
 from DB.models import Users
@@ -33,3 +33,4 @@ class MainWindow(QMainWindow):
             obj.hide()
 
         self.menubar.setEnabled(True)
+        self.txt_edu_name.setText(user[0].edu_name+' ')

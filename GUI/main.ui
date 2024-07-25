@@ -116,6 +116,9 @@
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -157,6 +160,30 @@
       </property>
      </spacer>
     </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QLabel" name="txt_edu_name">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(207, 207, 207);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -172,6 +199,8 @@
     <property name="title">
      <string>Данные</string>
     </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -181,6 +210,16 @@
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
+  <action name="action">
+   <property name="text">
+    <string>Данные об ОУ</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Данные о работниках</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
