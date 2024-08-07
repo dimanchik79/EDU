@@ -1,6 +1,7 @@
 import hashlib
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QMainWindow, QLabel
 
 from DB.models import Users
 
@@ -15,9 +16,7 @@ class MainWindow(QMainWindow):
         uic.loadUi("GUI/main.ui", self)
 
         self.autorize = [self.txt_username, self.btn_enter, self.txt_password, self.lbl_auth]
-
         self.menubar.setEnabled(False)
-
         self.btn_enter.clicked.connect(self.enter_to_program)
 
     def enter_to_program(self):
@@ -33,4 +32,7 @@ class MainWindow(QMainWindow):
             obj.hide()
 
         self.menubar.setEnabled(True)
-        self.txt_edu_name.setText(user[0].edu_name+' ')
+        self.txt_edu_name.setText(user[0].edu_name)
+        label = QLabel()
+        label.setPixmap(QPixmap("IMG/logo_UG.png"))
+        self.layout.addWidget(label)
